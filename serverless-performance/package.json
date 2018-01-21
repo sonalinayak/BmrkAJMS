@@ -1,0 +1,38 @@
+{
+  "name": "serverless-performance",
+  "version": "0.0.46",
+  "description": "This package allows you to measure performance characteristics of serverless platforms such as AWS Lambda, Azure Functions, IBM OpenWhisk, and Google Cloud Functions.",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.79.0",
+    "serverless": "git+https://github.com/mgarrettm/serverless",
+    "serverless-azure-functions": "git+https://github.com/serverless/serverless-azure-functions",
+    "serverless-google-cloudfunctions": "git+https://github.com/serverless/serverless-google-cloudfunctions.git",
+    "serverless-openwhisk": "^0.4.4",
+    "serverless-prototype-plugin": "0.0.20",
+    "url-regex": "^4.0.0",
+    "yamljs": "^0.2.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "serverless-performance": "bin/slsperf.js",
+    "slsperf": "bin/slsperf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgarrettm/serverless-performance.git"
+  },
+  "keywords": [
+    "serverless",
+    "performance"
+  ],
+  "author": "Garrett McGrath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mgarrettm/serverless-performance/issues"
+  },
+  "homepage": "https://github.com/mgarrettm/serverless-performance#readme"
+}

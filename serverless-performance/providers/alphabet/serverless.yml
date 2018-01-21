@@ -1,0 +1,12 @@
+service: test
+provider:
+    name: google
+    runtime: nodejs4.3
+    project: cryptic-cache-192218
+    credentials: keyfile.json
+plugins:
+    - serverless-google-cloudfunctions
+package:
+    exclude: ['node_modules/**', .gitignore, package.json, '.git/**']
+functions:
+    test: {handler: test, availableMemoryMb: 512, events: [{http: /}]}

@@ -1,0 +1,10 @@
+service: your-service-name
+provider:
+    name: azure
+    location: 'East US'
+plugins:
+    - serverless-azure-functions
+package:
+    exclude: ['node_modules/**', .gitignore, package.json, '.git/**']
+functions:
+    test0: {handler: handler.test, events: [{http: true, x-azure-settings: {authLevel: anonymous}}]}
