@@ -119,6 +119,7 @@ function executeThroughputTest(results, currentWidth, maxWidth, testDuration, fu
 
 function executeDeploymentTest(results, delay, delayCallback, maxDelay, functionDuration, uri, callback) {
   // Example code (Implement deployment test here)
+    //copied executeLatencyTest's function from above
     executeFunction(uri, functionDuration, result => {
         results.delay = delay;
     results.push(result);

@@ -34,6 +34,7 @@ let keepAliveTest = {
 };
 
 let deploymentTest = {
+    //example code (Copied latencytest's function from above)
         type: 'deployment',
     //example code (Implement deployment test function here)
         delayCallback: i => 60000 * (Math.floor((i - 1) / 5) + 1),
