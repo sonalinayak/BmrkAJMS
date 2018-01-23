@@ -2,8 +2,8 @@ service: test
 provider:
     name: google
     runtime: nodejs4.3
-    project: cryptic-cache-192218
-    credentials: keyfile.json
+    project: ylwdalavlhsj
+    credentials: ~/.gcloud/keyfile.json
 plugins:
     - serverless-google-cloudfunctions
 package:

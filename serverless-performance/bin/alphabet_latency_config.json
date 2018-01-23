@@ -1,0 +1,1 @@
+{"provider":{"name":"alphabet"},"function":{"duration":0},"test":{"type":"latency","maxDelay":1800000,"iterations":1},"resultsDir":"."}

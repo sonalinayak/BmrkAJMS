@@ -123,19 +123,6 @@ function executeDeploymentTest(results, delay, delayCallback, maxDelay, function
     executeFunction(uri, functionDuration, result => {
         results.delay = delay;
     results.push(result);
-
-    if (delay >= maxDelay) {
-        callback(results);
-        return;
-    }
-
-    let nextDelay = delay + delayCallback(results.length);
-    console.log(`Delaying for ${nextDelay}ms`);
-
-    setTimeout(
-        executeDeploymentTest,
-        nextDelay,
-        results, nextDelay, delayCallback, maxDelay, functionDuration, uri, callback);
 });
     // TO DO Complete function remove the example code
 }

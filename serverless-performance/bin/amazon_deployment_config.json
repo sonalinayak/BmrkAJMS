@@ -1,0 +1,1 @@
+{"provider":{"name":"amazon"},"function":{"duration":0},"test":{"type":"deployment","maxDelay":1800000,"iterations":1},"resultsDir":"."}

@@ -6,7 +6,6 @@
 const exec = require('child_process').exec;
 const fs = require('fs');
 const path = require('path');
-
 const urlRegex = require('url-regex');
 const YAML = require('yamljs');
 
@@ -32,6 +31,8 @@ function prepareFunctions(provider, callback) {
 }
 
 function deployFunctions(provider, callback) {
+  var start = Date.now();
+  console.log(start + '<----- starting time')
   let deploymentPath = path.join(__dirname, provider.name);
 
   let child = exec('cd ' + deploymentPath + '&& serverless deploy', { env: env });
@@ -41,6 +42,7 @@ function deployFunctions(provider, callback) {
     process.stdout.write(data);
   });
 
+
   child.stderr.on('data', data => process.stderr.write(data));
 
   child.on('close', code => {
@@ -48,9 +50,11 @@ function deployFunctions(provider, callback) {
     if (code == 0) {
       uri = extractUri(provider, stdout.match(urlRegex()));
     }
-
+    var deploymentLatency = Date.now() - start;
+    console.log(deploymentLatency+ 'ms <----- deployment time');
     callback(code, uri);
   });
+
 }
 
 function removeFunctions(provider, callback) {
