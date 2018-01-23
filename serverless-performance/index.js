@@ -40,6 +40,18 @@ function run(config, verifyRemoval, callback) {
               uri,
               callback);
             break;
+            case 'deployment':
+                executeDeploymentTest(
+                    //Example code
+                    [],
+                    0,
+                    config.test.delayCallback,
+                    config.test.maxDelay,
+                    config.function.duration,
+                    uri,
+                    callback);
+                // TO DO
+                break;
         }
       });
     });
@@ -103,6 +115,28 @@ function executeThroughputTest(results, currentWidth, maxWidth, testDuration, fu
       }
     });
   }
+}
+
+function executeDeploymentTest(results, delay, delayCallback, maxDelay, functionDuration, uri, callback) {
+  // Example code (Implement deployment test here)
+    executeFunction(uri, functionDuration, result => {
+        results.delay = delay;
+    results.push(result);
+
+    if (delay >= maxDelay) {
+        callback(results);
+        return;
+    }
+
+    let nextDelay = delay + delayCallback(results.length);
+    console.log(`Delaying for ${nextDelay}ms`);
+
+    setTimeout(
+        executeDeploymentTest,
+        nextDelay,
+        results, nextDelay, delayCallback, maxDelay, functionDuration, uri, callback);
+});
+    // TO DO Complete function remove the example code
 }
 
 function executeFunction(uri, duration, callback) {

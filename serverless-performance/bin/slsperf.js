@@ -33,6 +33,14 @@ let keepAliveTest = {
   maxDelay: 101
 };
 
+let deploymentTest = {
+        type: 'deployment',
+    //example code (Implement deployment test function here)
+        delayCallback: i => 60000 * (Math.floor((i - 1) / 5) + 1),
+    maxDelay: 1800000
+//TO DO
+};
+
 program
   .usage('[options] <resultsDirectory>')
   .option(
@@ -59,6 +67,10 @@ program
     '-c, --concurrency',
     'Runs a concurrency test on the specified provider',
     () => config.test = throughputTest)
+  .option(
+    '-t, --deployment',
+    'Runs a deployment test on the specified provider',
+    () => config.test = deploymentTest)
   .option(
     '-k, --keep-alive',
     'Runs a keep-alive test on the specified provider',

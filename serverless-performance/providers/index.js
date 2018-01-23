@@ -115,32 +115,6 @@ function generateFunctions(provider) {
         }]
       };
       break;
-    case 'ibm':
-      functions[functionName] = {
-        handler: 'handler.test',
-        memory: 512,
-        events: [{
-          http: 'POST test'
-        }]
-      };
-      break;
-    case 'microsoft':
-      functions[functionName] = {
-        handler: 'handler.test',
-        events: [{
-          http: true,
-          'x-azure-settings': {
-            authLevel: 'anonymous'
-          }
-        }]
-      };
-      break;
-    case 'prototype':
-      functions[functionName] = {
-        handler: 'index.js',
-        memorySize: 512
-      };
-      break;
   }
 
   return functions;

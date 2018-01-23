@@ -39,6 +39,7 @@ Options:
     -d, --duration <ms>    Number of milliseconds the function should execute before returning
     -b, --backoff          Runs a backoff test on the specified provider
     -c, --concurrency      Runs a concurrency test on the specified provider
+    -t, --deployment      Runs a deployment test on the specified provider
     -k, --keep-alive       Maintains an invocation call to the specified provider
     -i, --iterations <n>   Number of times to run the test
 
