@@ -1,0 +1,1 @@
+{"provider":{"name":"amazon"},"function":{},"test":{"type":"latency","maxDelay":1800000,"iterations":1},"resultsDir":"."}

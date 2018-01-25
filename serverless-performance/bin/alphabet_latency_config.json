@@ -1,0 +1,1 @@
+{"provider":{"name":"alphabet","project":"cryptic-cache-192218","credentials":"keyfile.json"},"function":{},"test":{"type":"latency","maxDelay":1800000,"iterations":1},"resultsDir":"."}
