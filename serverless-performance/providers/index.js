@@ -1,6 +1,3 @@
-// TODO: have you ever heard of promises?
-// TODO: better way to call serverless? not exec?
-
 'use strict';
 
 const exec = require('child_process').exec;
