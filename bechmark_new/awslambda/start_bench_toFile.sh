@@ -1,6 +1,6 @@
 # set login credentials
-export AWS_ACCESS_KEY_ID=AKIAJWF6G5ZCDEJUFPTQ 
-export AWS_SECRET_ACCESS_KEY=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
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
 
 echo Benchmark AWS Lambda
 
