@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "serverless.com",
+  "author": "EC_Benchmarking_Group18",
   "license": "MIT",
   "dependencies": {
     "serverless-google-cloudfunctions": "^1.1.0"
