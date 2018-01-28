@@ -1,37 +1,39 @@
+#!/usr/bin/env bash
 # set login credentials
-export AWS_ACCESS_KEY_ID=
-export AWS_SECRET_ACCESS_KEY=
+export AWS_ACCESS_KEY_ID= #TO DO
+export AWS_SECRET_ACCESS_KEY= #TO DO
 
 echo Benchmark AWS Lambda
 
 #set iterations
-for i in $(seq 1 1)
+for i in $(seq 1 20)
 do
 echo -----------------------------------------------------------------------
 echo Serverless Deploy
 START=$(date +%s.%N)
 serverless deploy
 END=$(date +%s.%N)
-DIFF=$(echo "$END - $START" | bc)
+DIFF1=$(echo "$END - $START" | bc)
 echo Time Serverless-Deploy $i:
-echo $DIFF
+echo $DIFF1
 echo -----------------------------------------------------------------------
 echo Could Start
 START=$(date +%s.%N)
 serverless invoke --function hello
 END=$(date +%s.%N)
-DIFF=$(echo "$END - $START" | bc)
+DIFF2=$(echo "$END - $START" | bc)
 echo Time Could Start $i:
-echo $DIFF
+echo $DIFF2
 echo -----------------------------------------------------------------------
 echo Warm Start
 START=$(date +%s.%N)
 serverless invoke --function hello
 END=$(date +%s.%N)
-DIFF=$(echo "$END - $START" | bc)
+DIFF3=$(echo "$END - $START" | bc)
 echo Time Warm Start $i:
-echo $DIFF
+echo $DIFF3
 echo -----------------------------------------------------------------------
+echo $DIFF1"\t"$DIFF2"\t"$DIFF3 >> result.txt
 echo Remove Function
 serverless remove
 

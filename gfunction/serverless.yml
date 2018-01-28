@@ -3,9 +3,9 @@ service: gfunction
 provider:
   name: google
   runtime: nodejs
-  project: intense-music-192515
+  project: #project ID from keyfile.json
   # the path to the credentials file needs to be absolute
-  credentials: /home/johannes/bechmark/gfunction/keyfile.json
+  credentials: #TO DO
 
 plugins:
   - serverless-google-cloudfunctions
