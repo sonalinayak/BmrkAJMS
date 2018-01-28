@@ -3,7 +3,7 @@ service: gfunction
 provider:
   name: google
   runtime: nodejs
-  project: #project ID from keyfile.json
+  project: #project ID from keyfile.json file
   # the path to the credentials file needs to be absolute
   credentials: #TO DO
 
