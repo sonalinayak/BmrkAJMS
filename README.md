@@ -25,14 +25,13 @@ Set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` in awslambda/start_bench_tof
 
 * Run bash files in both the providers to get the benchmarks of deployment, cold start and warm start latencies.
 
-
- For AWS lambda
+## For AWS lambda
  ```bash
  cd awslambda 
  start start_bench_tofile.sh 
  ```
  
- For Google Cloud Functions
+## For Google Cloud Functions
  ```bash
  cd gfunction
  start start_bench_tofile.sh
