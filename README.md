@@ -38,4 +38,4 @@ Set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` in awslambda/start_bench_tof
  ```
 
 
-The results obtained in the textfile helps us understand the latencies of execution, both cold and warm, also deployment time on AWS Lambda and Google Cloud Functions.
+The Results obtained in the textfile helps us understand the latencies of execution, both cold and warm, also deployment time on AWS Lambda and Google Cloud Functions.
