@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# set login credentials
+# set login credentials for AWS
 export AWS_ACCESS_KEY_ID= #TO DO
 export AWS_SECRET_ACCESS_KEY= #TO DO
 
